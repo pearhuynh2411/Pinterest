@@ -1,0 +1,487 @@
+{
+	"info": {
+		"_postman_id": "00af44f4-439e-46f5-8ecc-edbb6eb5e607",
+		"name": "Pinterest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37100198",
+		"_collection_link": "https://pearhuynh-4676.postman.co/workspace/PearHuynh~0a715105-ac51-496a-be54-71d363b888b1/collection/37100198-00af44f4-439e-46f5-8ecc-edbb6eb5e607?action=share&source=collection_link&creator=37100198"
+	},
+	"item": [
+		{
+			"name": "Dang ki, Dang nhap",
+			"item": [
+				{
+					"name": "Dang ki",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"huynh123@gmail.com\",\r\n    \"mat_khau\": \"123123\",\r\n    \"ho_ten\": \"Huynh\",\r\n    \"tuoi\": 23\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/sign-up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dang nhap",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"huynh123@gmail.com\",\r\n    \"mat_khau\": \"123123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trang chu",
+			"item": [
+				{
+					"name": "Get danh sach anh ve va tim kiem",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Im5ndW9pRHVuZ0lkIjoyMX0sImlhdCI6MTczMjc1MzI5OCwiZXhwIjoxNzMyODM5Njk4fQ.kArNHgvenz1386lAcy1fMgfxv7iaTr0luDXhlt2rl58",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Im5ndW9pRHVuZ0lkIjoyMX0sImlhdCI6MTczMjc1MzI5OCwiZXhwIjoxNzMyODM5Njk4fQ.kArNHgvenz1386lAcy1fMgfxv7iaTr0luDXhlt2rl58",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/get-list-img",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"get-list-img"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trang chi tiet",
+			"item": [
+				{
+					"name": "Get thong tin anh va nguoi tao anh",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Im5ndW9pRHVuZ0lkIjoyMX0sImlhdCI6MTczMjc1MzI5OCwiZXhwIjoxNzMyODM5Njk4fQ.kArNHgvenz1386lAcy1fMgfxv7iaTr0luDXhlt2rl58",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/detail/get-info-img/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"detail",
+								"get-info-img",
+								"6"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Im5ndW9pRHVuZ0lkIjoyMX0sImlhdCI6MTczMjc1MzI5OCwiZXhwIjoxNzMyODM5Njk4fQ.kArNHgvenz1386lAcy1fMgfxv7iaTr0luDXhlt2rl58",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get thong tin binh luan theo anh",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Im5ndW9pRHVuZ0lkIjoyMX0sImlhdCI6MTczMjc1MzI5OCwiZXhwIjoxNzMyODM5Njk4fQ.kArNHgvenz1386lAcy1fMgfxv7iaTr0luDXhlt2rl58",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/detail/get-cmt-img/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"detail",
+								"get-cmt-img",
+								"5"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Im5ndW9pRHVuZ0lkIjoyMX0sImlhdCI6MTczMjc1MzI5OCwiZXhwIjoxNzMyODM5Njk4fQ.kArNHgvenz1386lAcy1fMgfxv7iaTr0luDXhlt2rl58",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get thong tin da luu va chua luu",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Im5ndW9pRHVuZ0lkIjoyMX0sImlhdCI6MTczMjc1MzI5OCwiZXhwIjoxNzMyODM5Njk4fQ.kArNHgvenz1386lAcy1fMgfxv7iaTr0luDXhlt2rl58",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/detail/get-save-img/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"detail",
+								"get-save-img",
+								"5"
+							],
+							"query": [
+								{
+									"key": "toik",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post luu thong tin binh luan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Im5ndW9pRHVuZ0lkIjoyMX0sImlhdCI6MTczMjc1MzI5OCwiZXhwIjoxNzMyODM5Njk4fQ.kArNHgvenz1386lAcy1fMgfxv7iaTr0luDXhlt2rl58",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nguoiDungId\": 5,\r\n    \"hinhId\": 5,\r\n    \"noiDung\": \"hihihi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/detail/add-cmt",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"detail",
+								"add-cmt"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Quan ly anh",
+			"item": [
+				{
+					"name": "Get thong tin user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Im5ndW9pRHVuZ0lkIjoyMX0sImlhdCI6MTczMjc1MzI5OCwiZXhwIjoxNzMyODM5Njk4fQ.kArNHgvenz1386lAcy1fMgfxv7iaTr0luDXhlt2rl58",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/manager-img/get-info-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"manager-img",
+								"get-info-user"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Im5ndW9pRHVuZ0lkIjoyMX0sImlhdCI6MTczMjc1MzI5OCwiZXhwIjoxNzMyODM5Njk4fQ.kArNHgvenz1386lAcy1fMgfxv7iaTr0luDXhlt2rl58",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get danh sach anh da luu theo user id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Im5ndW9pRHVuZ0lkIjoyMX0sImlhdCI6MTczMjc1MzI5OCwiZXhwIjoxNzMyODM5Njk4fQ.kArNHgvenz1386lAcy1fMgfxv7iaTr0luDXhlt2rl58",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/manager-img/get-img-saved-by-user-id/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"manager-img",
+								"get-img-saved-by-user-id",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get danh sach anh da tao theo user id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Im5ndW9pRHVuZ0lkIjoyMX0sImlhdCI6MTczMjc1MzI5OCwiZXhwIjoxNzMyODM5Njk4fQ.kArNHgvenz1386lAcy1fMgfxv7iaTr0luDXhlt2rl58",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/manager-img/get-img-created-by-user-id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"manager-img",
+								"get-img-created-by-user-id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xoa anh theo hinh id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Im5ndW9pRHVuZ0lkIjoyMX0sImlhdCI6MTczMjc1MzI5OCwiZXhwIjoxNzMyODM5Njk4fQ.kArNHgvenz1386lAcy1fMgfxv7iaTr0luDXhlt2rl58",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/manager-img/delete-img-by-img-id/29",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"manager-img",
+								"delete-img-by-img-id",
+								"29"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Them anh",
+			"item": [
+				{
+					"name": "Them anh",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Im5ndW9pRHVuZ0lkIjoyMX0sImlhdCI6MTczMjc1MzI5OCwiZXhwIjoxNzMyODM5Njk4fQ.kArNHgvenz1386lAcy1fMgfxv7iaTr0luDXhlt2rl58",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "hinhAnh",
+									"type": "file",
+									"src": "/C:/Users/holeh/Pictures/Screenshots/Screenshot 2024-11-20 222224.png"
+								},
+								{
+									"key": "tenHinh",
+									"value": "trung thuong ne",
+									"type": "text"
+								},
+								{
+									"key": "moTa",
+									"value": "hihi",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/add-img/add-a-img",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"add-img",
+								"add-a-img"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chinh sua trang ca nhan",
+			"item": [
+				{
+					"name": "Chinh sua thong tin",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Im5ndW9pRHVuZ0lkIjoyMX0sImlhdCI6MTczMjc1MzI5OCwiZXhwIjoxNzMyODM5Njk4fQ.kArNHgvenz1386lAcy1fMgfxv7iaTr0luDXhlt2rl58",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "hinhAnh",
+									"type": "file",
+									"src": "/C:/Users/holeh/Pictures/Screenshots/Screenshot 2024-11-20 222224.png"
+								},
+								{
+									"key": "hoTen",
+									"value": "Huynh ne",
+									"type": "text"
+								},
+								{
+									"key": "tuoi",
+									"value": "42",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/edit-user/update-user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"edit-user",
+								"update-user",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
